@@ -81,7 +81,7 @@ class PrimeNow:
     def notify(message):
         print(f'Sending telegram message: {message}')
 
-        if config.telegram_active:
+        if config.telegram_enabled:
             Telegram.send_message(message)
 
     @staticmethod

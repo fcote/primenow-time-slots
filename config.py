@@ -10,7 +10,7 @@ def get_path(filename):
     return f'{dirname(abspath(__file__))}/{filename}'
 
 
-telegram_active = getenv('TELEGRAM_BOT_ACTIVE', 'false') == 'true'
+telegram_enabled = getenv('TELEGRAM_BOT_ENABLED', 'false') == 'true'
 telegram_token = getenv('TELEGRAM_BOT_TOKEN')
 telegram_chat_id = getenv('TELEGRAM_CHAT_ID')
 

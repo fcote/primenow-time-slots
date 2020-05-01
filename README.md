@@ -47,7 +47,7 @@ Whether or not to stop if an available time slot has been found
 
 The target merchant to check (Should match one of the entry in the primenow_merchants.json file)
 
-### `TELEGRAM_BOT_ACTIVE`
+### `TELEGRAM_BOT_ENABLED`
 
 Whether or not you want to be notified on Telegram
 

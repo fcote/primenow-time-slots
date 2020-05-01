@@ -8,6 +8,9 @@ class Telegram:
 
     @staticmethod
     def send_message(message):
+        if config.telegram_token is None or config.telegram_chat_id is None:
+            raise RuntimeError('Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID env vars')
+
         return requests.get('{telegram_url}/bot{token}/sendMessage?chat_id={chat_id}&text={message}'.format(
             telegram_url=Telegram.TELEGRAM_URL,
             token=config.telegram_token,

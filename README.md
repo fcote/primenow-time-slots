@@ -1,4 +1,4 @@
-# 📦 Amazon Prime Now time slots checker
+# 📦 Amazon Prime Now time slots monitoring
 
 ## Setup
 

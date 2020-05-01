@@ -7,14 +7,14 @@
 pip install -r requirements.txt
 ```
 
-### Fill out the `.env` file
+### .env
 ```.bash
 cp .env.example .env
 ```
 
 See the "Environments variables" section to fill it
 
-### Fill out the `primenow_merchants.json` file
+### primenow_merchants.json
 
 Each key should match a primenow merchant name.
 
@@ -35,59 +35,40 @@ For `https://primenow.amazon.fr/storefront?merchantId=AGMEOZFASZJSS` The id is `
 ```
 
 ## Environments variables
-**CHECKS_INTERVAL**
+### `CHECKS_INTERVAL`
 
 Interval in seconds between each time slot check
 
-**STOPS_IF_FOUND**
+### `STOPS_IF_FOUND`
 
 Whether or not to stop if an available time slot has been found
 
-**MERCHANT_TO_CHECK**
+### `MERCHANT_TO_CHECK`
 
 The target merchant to check (Should match one of the entry in the primenow_merchants.json file)
 
-**TELEGRAM_BOT_ACTIVE**
+### `TELEGRAM_BOT_ACTIVE`
 
 Whether or not you want to be notified on Telegram
 
-**TELEGRAM_BOT_TOKEN**
+### `TELEGRAM_BOT_TOKEN`
 
 The telegram bot token (See the "Telegram setup" section) <br>
 Only required the if `TELEGRAM_BOT_ACTIVE` is set to `true`
 
-**TELEGRAM_CHAT_ID**
+### `TELEGRAM_CHAT_ID`
 
 Your telegram chat id (See the "Telegram setup" section) <br>
 Only required the if `TELEGRAM_BOT_ACTIVE` is set to `true`
 
-**COOKIE_UBID_ACBFR** / 
-**COOKIE_X_ACBFR** / 
-**COOKIE_AT_ACBFR** /
-**COOKIE_SESS_AT_ACBFR**
+### `COOKIE_UBID_ACBFR` / `COOKIE_X_ACBFR` / `COOKIE_AT_ACBFR` / `COOKIE_SESS_AT_ACBFR`
 
-:warning: Required, the script will bot work is these variable are not filled. <br>
+:warning: Required, the script will not work is these variable are not filled. <br>
 
 These are the primenow cookies, used to make the requests <br>
 You can find these by pressing F12 on Prime Now checkout page (Application->Cookies)
 
-#### Default values
-```.env
-CHECKS_INTERVAL=60
-STOPS_IF_FOUND=true
-MERCHANT_TO_CHECK=Amazon
-
-TELEGRAM_BOT_ACTIVE=false
-TELEGRAM_BOT_TOKEN=
-TELEGRAM_CHAT_ID=
-
-COOKIE_UBID_ACBFR=
-COOKIE_X_ACBFR=
-COOKIE_AT_ACBFR=
-COOKIE_SESS_AT_ACBFR=
-```
-
-## Telegram setup
+## :email: Telegram setup
 
 - Send `/start` to `@BotFather` on Telegram
 - Give a name to your bot

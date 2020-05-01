@@ -2,7 +2,7 @@
 
 ## Setup
 
-### Install the dependencies
+### dependencies
 ```.bash
 pip install -r requirements.txt
 ```
@@ -12,7 +12,7 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-See the "Environments variables" section to fill it
+See the [Environments variables](#environments-variables) section to fill it
 
 ### primenow_merchants.json
 
@@ -53,12 +53,12 @@ Whether or not you want to be notified on Telegram
 
 ### `TELEGRAM_BOT_TOKEN`
 
-The telegram bot token (See the "Telegram setup" section) <br>
+The telegram bot token (See the [Telegram setup](#email-telegram-setup) section) <br>
 Only required the if `TELEGRAM_BOT_ACTIVE` is set to `true`
 
 ### `TELEGRAM_CHAT_ID`
 
-Your telegram chat id (See the "Telegram setup" section) <br>
+Your telegram chat id (See the [Telegram setup](#email-telegram-setup) section) <br>
 Only required the if `TELEGRAM_BOT_ACTIVE` is set to `true`
 
 ### `COOKIE_UBID_ACBFR` / `COOKIE_X_ACBFR` / `COOKIE_AT_ACBFR` / `COOKIE_SESS_AT_ACBFR`

@@ -1,0 +1,10 @@
+# Jetbrains
+.idea
+
+# Env
+.env
+
+# Logs
+logs/*
+!logs/.gitkeep
+__pycache__/
